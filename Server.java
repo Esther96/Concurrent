@@ -13,7 +13,7 @@ public class Server
     { 
   
         // Step 1: Establish the socket connection. 
-        ServerSocket ss = new ServerSocket(4444); 
+        ServerSocket ss = new ServerSocket(20000); 
         Socket s = ss.accept(); 
   
         // Step 2: Processing the request. 
