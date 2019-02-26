@@ -14,7 +14,7 @@ public class Client
     public static void main(String[] args) throws IOException 
     { 
         InetAddress ip = InetAddress.getLocalHost(); 
-        int port = 4444; 
+        int port = 20000; 
         Scanner sc = new Scanner(System.in); 
   
         // Step 1: Open the socket connection. 
