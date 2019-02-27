@@ -7,7 +7,7 @@ import java.net.ServerSocket;
 import java.net.Socket; 
 import java.util.StringTokenizer; 
   
-public class Server 
+class Server 
 { 
     public static void main(String args[]) throws IOException 
     { 
