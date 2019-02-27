@@ -1,31 +1,18 @@
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.net.InetAddress;
-import java.net.Socket;
-import java.util.Scanner;
-public class MyClientSocket {
-    private Socket socket;
-    private Scanner scanner;
-    private MyClientSocket(InetAddress serverAddress, int serverPort) throws Exception {
-        this.socket = new Socket(serverAddress, serverPort);
-        this.scanner = new Scanner(System.in);
-    }
-    private void start() throws IOException {
-        String input;
-        while (true) {
-            input = scanner.nextLine();
-            PrintWriter out = new PrintWriter(this.socket.getOutputStream(), true);
-            out.println(input);
-            out.flush();
-        }
-    }
-    
-    public static void main(String[] args) throws Exception {
-        MyClientSocket client = new MyClientSocket(
-                InetAddress.getByName(args[0]), 
-                Integer.parseInt(args[1]));
-        
-        System.out.println("\r\nConnected to Server: " + client.socket.getInetAddress());
-        client.start();                
-    }
+import java.io.*;
+import java.net.*;
+
+class TCPClient {
+ public static void main(String argv[]) throws Exception {
+  String sentence;
+  String modifiedSentence;
+  BufferedReader inFromUser = new BufferedReader(new InputStreamReader(System.in));
+  Socket clientSocket = new Socket("localhost", 6789);
+  DataOutputStream outToServer = new DataOutputStream(clientSocket.getOutputStream());
+  BufferedReader inFromServer = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
+  sentence = inFromUser.readLine();
+  outToServer.writeBytes(sentence + 'n');
+  modifiedSentence = inFromServer.readLine();
+  System.out.println("FROM SERVER: " + modifiedSentence);
+  clientSocket.close();
+ }
 }
