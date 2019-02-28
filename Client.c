@@ -66,7 +66,7 @@ int main (int argc, char *argv[])
   scanf("%f %f %d", &principal_amt, &rate, &time);
   fflush (stdout);
   read (0, msg, 100);
-  read(principal_amt, rate, time)
+  
   
   /* trimiterea mesajului la server */
   if (write (sd, msg, 100) <= 0)
