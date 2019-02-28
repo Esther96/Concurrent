@@ -109,7 +109,7 @@ int main ()
       strcat(msgrasp,msg);
       
       printf("[server]Trimitem mesajul inapoi...%s\n",msgrasp);
-      
+      printf("[server]Trimitem mesajul inapoi...%s\n",simple_interest);
       
       /* returnam mesajul clientului */
       if (write (client, msgrasp, 100) <= 0)
