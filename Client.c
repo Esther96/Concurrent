@@ -89,7 +89,7 @@ int main (int argc, char *argv[])
     }
   /* afisam mesajul primit */
   printf ("[client]Mesajul primit este: %s\n", msg);
-   printf ("[client]Mesajul primit este: %s\n", );
+   printf ("[client]Mesajul primit este: %s\n", &simple_interest );
   /* inchidem conexiunea, am terminat */
   close (sd);
 }
