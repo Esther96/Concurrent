@@ -64,7 +64,7 @@ int main (int argc, char *argv[])
    bzero(&principal_amt, 8);
    bzero(&rate, 8);
    bzero(&time, 4);
-  //printf ("[client]Introduceti un nume: ");
+  /* printf ("[client]Introduceti un nume: "); */
   printf("Enter the values of principal_amt, rate and time \n");
   scanf("%f %f %d", &principal_amt, &rate, &time);
   fflush (stdout);
