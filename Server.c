@@ -108,6 +108,10 @@ int main ()
      printf("Simple interest = %5.2f\n", simple_interest);
       /*pregatim mesajul de raspuns */
       bzero(msgrasp,100);
+	 
+	bzero (&principal_amt, 4);
+	  bzero(&rate, 4);
+	  bzero (&time, 4);
       strcat(msgrasp,"Hello ");
       strcat(msgrasp,msg);
       
