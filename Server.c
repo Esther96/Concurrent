@@ -84,9 +84,9 @@ int main ()
 
       /* s-a realizat conexiunea, se astepta mesajul */
       bzero (msg, 100);
-	bzero (&principal_amt, 4);
-	  bzero(&rate, 4);
-	  bzero (&time, 4);
+	bzero (principal_amt, 4);
+	  bzero(rate, 4);
+	  bzero (time, 4);
       
       printf ("[server]Asteptam mesajul...\n");
       fflush (stdout);
