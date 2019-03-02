@@ -2,7 +2,7 @@
    Asteapta un nume de la clienti; intoarce clientului sirul
    "Hello nume".
    
-   Autor: 
+   Autor: es
 */
 
 #include <sys/types.h>
