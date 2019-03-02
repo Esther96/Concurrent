@@ -83,7 +83,7 @@ int main ()
 	    }
 
       /* s-a realizat conexiunea, se astepta mesajul */
-      bzero (msg, 100);
+      bzero (msg, 10);
 	bzero (&principal_amt, 4);
 	  bzero(&rate, 4);
 	  bzero (&time, 4);
@@ -100,7 +100,7 @@ int main ()
 	}
 	
       printf ("[server]Mesajul a fost receptionat...%s\n", msg);
-      
+      printf ("[server]Mesajul a fost receptionat...%s\n", &time);
       simple_interest = (principal_amt * rate * time) / 100.0;
       printf("Amount = Rs. %5.2f\n", principal_amt);
      printf("Rate = Rs. %5.2f%\n", rate);
