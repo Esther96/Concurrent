@@ -3,7 +3,7 @@ import java.net.*;
 import java.util.Date;
 import java.io.*;
 public class MultithreadedSocketServer {
-   
+public static int[] seats = new int[12];
   public static void main(String[] args) throws Exception {
 
 	 System.out.println("Welcome to the DIC lovin train reservation system!");
