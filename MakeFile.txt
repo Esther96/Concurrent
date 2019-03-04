@@ -1,0 +1,17 @@
+server
+wget --no-check-certificate https://raw.githubusercontent.com/Esther96/Concurrent/master/TransportServer.java
+javac TransportServer.java
+java TransportServer
+
+client
+wget --no-check-certificate https://raw.githubusercontent.com/Esther96/Concurrent/master/TransportClient.java
+javac TransportClient.java
+ulimit -u 36
+
+server 
+java TransportServer
+
+client 
+java TransportClient
+
+
